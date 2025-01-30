@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Components for mobile applications.">
+
+    <title>Thirty Three</title>
+
+    <link href="../thirty-three.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <!-- Main screen -->
+    <tt-screen>
+
+      <!-- Header -->
+      <tt-header>
+        <tt-toolbar>
+          <tt-icon-button 
+            icon-name="menu">
+          </tt-icon-button>
+          <tt-icon-button 
+            icon-name="search" 
+            slot="suffix">
+          </tt-icon-button>                    
+          <tt-icon-button 
+            icon-name="add" 
+            slot="suffix">
+          </tt-icon-button>          
+        </tt-toolbar>
+        <tt-toolbar label="Beer"></tt-toolbar>
+      </tt-header>
+
+      <!-- Views -->
+      <tt-stack>
+        <tt-box style="flex-basis: 0; flex-grow: 1;">
+          <p>Timeline</p>
+          <tt-input error="Error" label="Beer name" style="margin: 0 16px 0 16px;" suffix="mmHg"></tt-input>
+          <tt-form-field label="Something">
+            <tt-icon name="settings" slot="icon"></tt-icon>
+            <tt-text-field icon="sports_bar" label="Beer name" placeholder="Beer name"></tt-text-field>          
+          </tt-form-field>
+          <tt-text-field icon="sports_bar" label="Beer name" placeholder="Beer name" suffix="mmHg"></tt-text-field>                    
+        </tt-box>
+        <tt-box>
+          <p>Photos</p>
+        </tt-box>    
+        <tt-box>
+          <p>Map</p>
+        </tt-box>
+        <tt-box>
+          <p>Collections</p>
+        </tt-box>                    
+      </tt-stack>
+
+      <!-- Bottom navigation -->
+      <tt-navigation>
+        <tt-navigation-button 
+          icon-name="timeline" 
+          label="Timeline" 
+          selected>
+        </tt-navigation-button>
+        <tt-navigation-button 
+          icon-name="collections" 
+          label="Photos">
+        </tt-navigation-button>        
+        <tt-navigation-button 
+          icon-name="map" 
+          label="Map">
+        </tt-navigation-button>                
+        <tt-navigation-button 
+          icon-name="featured_play_list" 
+          label="Collections">
+        </tt-navigation-button>                
+      </tt-navigation>
+
+    </tt-screen>
+
+    <script src="./thirty-three.js" type="module"></script>
+
+    <script>
+      const navigation = document.querySelector( 'tt-navigation' );
+      navigation.addEventListener( 'tt-change', ( evt ) => stack.selectedIndex = evt.detail.selectedIndex );
+      const stack = document.querySelector( 'tt-stack' );
+    </script>
+
+  </body>
+</html>

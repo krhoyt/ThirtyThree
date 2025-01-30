@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  src: url( './fonts/Symbols/material-symbols-outlined.woff2' ) format( 'woff2' );
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  src: url( './fonts/Roboto/Roboto-Medium.ttf' ) format( 'truetype' );
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: url( './fonts/Roboto/Roboto-Regular.ttf' ) format( 'truetype' );
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: url( './fonts/Roboto/Roboto-Bold.ttf' ) format( 'truetype' );
+}
+
+:root {
+  --primary-color: #000000;
+  --scene-background-color: red;
+  --scene-color: white;
+}
+
+tt-toolbar:last-of-type {
+  padding: 0 0 0 12px;
+}
